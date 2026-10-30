@@ -1,0 +1,48 @@
+/* Divinity Companion showcase — design tokens, motion, scrollbars. */
+
+.showcase-root {
+  font-family: "MiSans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* page + bubble + sheet + toast motion */
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes bubble-in {
+  0% { opacity: 0; transform: scale(0.86) translateY(4px); }
+  70% { transform: scale(1.02) translateY(0); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sheet-up {
+  from { transform: translateY(60%); opacity: 0.4; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* hide horizontal scrollbars on carousels but keep vertical ones pretty */
+.showcase-root * {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 91, 217, 0.25) transparent;
+}
+.showcase-root ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.showcase-root ::-webkit-scrollbar-thumb {
+  background: rgba(124, 91, 217, 0.25);
+  border-radius: 999px;
+}
+.showcase-root ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.showcase-root [scrollbar-width="none"],
+.showcase-root .\[scrollbar-width\:none\] {
+  scrollbar-width: none;
+}
