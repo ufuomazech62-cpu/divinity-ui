@@ -165,7 +165,6 @@ function ConversationRow({ c, onOpen }: { c: Conversation; onOpen: (c: Conversat
 /* ============ Chat room ============ */
 
 export function ChatRoomPage({ name, onBack, onDetails }: { name: string; onBack: () => void; onDetails?: () => void }) {
-  const them = byId("seraphina");
   const [draft, setDraft] = useState("");
   const [msgs, setMsgs] = useState(chatThread);
 

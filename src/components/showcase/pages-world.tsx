@@ -26,7 +26,7 @@ export function WorldPage({ onOpenScene }: { onOpenScene: (s: (typeof scenes)[nu
     <div className="flex h-full flex-col">
       <div className="min-h-0 flex-1 space-y-4 overflow-y-auto px-4 pb-24 pt-3">
         {/* hero */}
-        <div className="relative overflow-hidden rounded-[28px] p-5 text-white shadow-[0_10px_30px_rgba(124,91,217,0.35)]" style={grad(["#4c3575", "#7c5bd9", "#9b7deb"])}>
+        <div className="relative overflow-hidden rounded-[28px] p-5 text-white shadow-[0_10px_30px_rgba(124,91,217,0.35)]" style={grad(["#4c3575", "#9b7deb"])}>
           <div className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
           <div className="absolute -bottom-12 -left-6 h-36 w-36 rounded-full bg-white/10 blur-2xl" />
           <div className="relative">

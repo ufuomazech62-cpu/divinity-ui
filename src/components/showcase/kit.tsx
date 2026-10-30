@@ -99,18 +99,21 @@ export function SearchBar({
   onChange,
   onFocus,
   className,
+  autoFocus,
 }: {
   placeholder: string;
   value?: string;
   onChange?: (v: string) => void;
   onFocus?: () => void;
   className?: string;
+  autoFocus?: boolean;
 }) {
   return (
     <div className={cn("flex items-center gap-2 rounded-full bg-white px-4 py-2.5 shadow-[0_1px_4px_rgba(76,40,130,0.06)]", className)}>
       <Search className="h-4 w-4 shrink-0 text-[#837791]" />
       <input
         value={value}
+        autoFocus={autoFocus}
         onChange={(e) => onChange?.(e.target.value)}
         onFocus={onFocus}
         placeholder={placeholder}

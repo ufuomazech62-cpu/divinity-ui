@@ -144,7 +144,7 @@ export function WalletPage({ onBack }: { onBack: () => void }) {
     <div className="flex h-full flex-col bg-[#f4f1fb]">
       <TopBar title="Spark wallet" onBack={onBack} />
       <div className="min-h-0 flex-1 space-y-4 overflow-y-auto p-4 pb-24">
-        <div className="relative overflow-hidden rounded-[28px] p-5 text-white shadow-[0_10px_30px_rgba(124,91,217,0.35)]" style={grad(["#4c3575", "#7c5bd9", "#9b7deb"])}>
+        <div className="relative overflow-hidden rounded-[28px] p-5 text-white shadow-[0_10px_30px_rgba(124,91,217,0.35)]" style={grad(["#4c3575", "#9b7deb"])}>
           <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">Balance</div>
           <div className="mt-1 flex items-end gap-2">
             <span className="text-4xl font-bold">{wallet.sparks.toLocaleString()}</span>
